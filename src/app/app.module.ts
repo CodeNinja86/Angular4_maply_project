@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AuthGuard } from './_guards/auth.guard';
-import { UserService } from './_services/user.service';
+import { AuthenticationService, UserService } from './_services/index';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +26,8 @@ import { routing } from './app.routing';
   ],
   providers: [
   	UserService,
-  	AuthGuard
+  	AuthGuard,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
